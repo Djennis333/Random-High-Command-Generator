@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steel Division 2: High Command Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Teko:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-200 p-4 md:p-8 theme-german">
+    <div class="max-w-7xl mx-auto bg-gray-900/70 backdrop-blur-sm rounded-xl p-4 sm:p-8 border border-gray-700/50 shadow-2xl">
+        
+        <!-- Theme Switcher -->
+        <div class="flex justify-center mb-6">
+            <div class="inline-flex rounded-md shadow-sm bg-gray-800 p-1" role="group">
+                <button id="theme-german-btn" type="button" class="theme-btn px-4 py-2 text-sm font-medium text-white bg-gray-600 rounded-l-md">
+                    Wehrmacht
+                </button>
+                <button id="theme-soviet-btn" type="button" class="theme-btn px-4 py-2 text-sm font-medium text-gray-400 bg-transparent rounded-r-md">
+                    Red Army
+                </button>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div id="header" class="text-center mb-10 border-b-2 border-gray-700 pb-4 flex flex-col items-center">
+            <div id="header-icon-container"></div>
+            <h1 id="header-title" class="text-5xl md:text-6xl font-bold header-font tracking-wider"></h1>
+            <p id="header-subtitle" class="text-gray-400 mt-2"></p>
+        </div>
+
+        <!-- Player Input Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <div>
+                <label for="player1" class="block text-sm font-medium text-gray-400 mb-1">Player 1</label>
+                <input type="text" id="player1" value="Dennis" class="w-full bg-gray-800 border-gray-600 text-white rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition">
+            </div>
+            <div>
+                <label for="player2" class="block text-sm font-medium text-gray-400 mb-1">Player 2</label>
+                <input type="text" id="player2" value="Cas" class="w-full bg-gray-800 border-gray-600 text-white rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition">
+            </div>
+            <div>
+                <label for="player3" class="block text-sm font-medium text-gray-400 mb-1">Player 3</label>
+                <input type="text" id="player3" value="Maikel" class="w-full bg-gray-800 border-gray-600 text-white rounded-lg p-3 focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition">
+            </div>
+        </div>
+
+        <div class="text-center mb-12">
+            <button id="generateBtn" class="text-gray-900 font-bold py-4 px-8 rounded-lg text-xl shadow-lg">
+                ASSIGN COMMAND ROLES
+            </button>
+        </div>
+        
+        <!-- Tabs -->
+        <div class="mb-4 border-b border-gray-700">
+            <nav class="flex -mb-px" aria-label="Tabs">
+                <button id="tab-assignments" class="tab-btn active w-1/2 md:w-auto font-medium px-6 py-3 text-lg">Assignments</button>
+                <button id="tab-rules" class="tab-btn w-1/2 md:w-auto font-medium px-6 py-3 text-lg">Role Rules</button>
+            </nav>
+        </div>
+        
+        <!-- Assignments Panel -->
+        <div id="assignments-panel">
+            <div id="results" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Awaiting orders placeholders -->
+            </div>
+        </div>
+
+        <!-- Rules Panel -->
+        <div id="rules-panel" class="hidden">
+            <div id="rules-container" class="space-y-4">
+                <!-- Rules will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
