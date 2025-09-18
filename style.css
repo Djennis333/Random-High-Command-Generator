@@ -1,0 +1,47 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url('https://www.transparenttextures.com/patterns/military.png');
+    background-color: #1a202c;
+    background-attachment: fixed;
+    transition: background-color 0.3s ease;
+}
+.header-font {
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1px;
+}
+.card {
+    background-color: rgba(26, 32, 44, 0.8); /* Darker card */
+    border: 1px solid rgba(74, 85, 104, 0.8);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+.tab-btn {
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    color: #d1d5db; /* text-gray-400 */
+    border-bottom-width: 2px;
+    border-color: transparent;
+}
+.tab-btn:not(.active):hover {
+    color: #ffffff;
+    border-color: #4b5563; /* gray-600 */
+}
+.theme-btn {
+    transition: all 0.2s ease-in-out;
+}
+/* Wehrmacht Theme */
+.theme-german .tab-btn.active { background-color: #f6e05e; color: #1a202c; border-color: #f6e05e; }
+.theme-german #generateBtn { background-image: linear-gradient(to bottom, #f6e05e, #f59e0b); }
+.theme-german #generateBtn:hover { background-image: linear-gradient(to bottom, #facc15, #d97706); }
+/* Soviet Theme */
+.theme-soviet { background-color: #1a1a1a; }
+.theme-soviet .tab-btn.active { background-color: #dc2626; color: #ffffff; border-color: #dc2626;}
+.theme-soviet #generateBtn { background-image: linear-gradient(to bottom, #ef4444, #dc2626); }
+.theme-soviet #generateBtn:hover { background-image: linear-gradient(to bottom, #f87171, #b91c1c); }
+
+#generateBtn:hover {
+    transform: scale(1.05);
+}
